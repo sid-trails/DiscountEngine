@@ -57,5 +57,13 @@ namespace DiscountEngineTest
             CombinationDiscountRule testObj = new CombinationDiscountRule('A', 'C', 40.00d,GetTestInventory() );
             Assert.AreEqual(125.00d,testObj.CalculateDiscountAmount(cart));
         }
+        [TestMethod]
+        public void ShouldReturnDiscountAmountBasedOnIfMultipleSetsAddedForSameSKU()
+        {
+            Cart cart = new Cart(GetTestInventory());
+            cart.AddItem('A',5);
+            CombinationDiscountRule testObj = new CombinationDiscountRule('A', 'A', 25.00d,GetTestInventory() );
+            Assert.AreEqual(150.00d,testObj.CalculateDiscountAmount(cart));
+        }
     }
 }

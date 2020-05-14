@@ -20,18 +20,32 @@ namespace DiscountEngine
         }
         public bool isApplicableOnCart(Cart cart)
         {
-            return cart.CartItems.ContainsKey(_SKUId1) && cart.CartItems.ContainsKey(_SKUId2) ;
+            return _SKUId1 == _SKUId2 ? cart.CartItems.ContainsKey(_SKUId1) && cart.CartItems.GetValueOrDefault(_SKUId1) >2 :
+                cart.CartItems.ContainsKey(_SKUId1) && cart.CartItems.ContainsKey(_SKUId2) ;
         }
 
         public double CalculateDiscountAmount(Cart cart)
         {
-            double discountPerCombination = _inventory.GetPrice(_SKUId1) + _inventory.GetPrice(_SKUId2) - _price;
-           
-            int noOfItems = cart.CartItems.GetValueOrDefault(_SKUId1);
-            int noOFItems2 = cart.CartItems.GetValueOrDefault(_SKUId2);
             if (isApplicableOnCart(cart))
             {
-                return Math.Min(noOfItems,noOFItems2) * discountPerCombination;
+                if (_SKUId1 == _SKUId2)
+                {
+                    var actualPricePerItem = _inventory.GetPrice(_SKUId1);
+                    var priceFor2 = cart.CartItems.GetValueOrDefault(_SKUId1) / 2  * _price ;
+                    var ActualPrice = actualPricePerItem * cart.CartItems.GetValueOrDefault(_SKUId1);
+                    var PriceForNonDiscountedItems = cart.CartItems.GetValueOrDefault(_SKUId1) % 2 *
+                                                        actualPricePerItem;
+                    return ActualPrice - (priceFor2 + PriceForNonDiscountedItems);
+                }
+
+                else
+                {
+                    double discountPerCombination =
+                        _inventory.GetPrice(_SKUId1) + _inventory.GetPrice(_SKUId2) - _price;
+                    int noOfItems = cart.CartItems.GetValueOrDefault(_SKUId1);
+                    int noOFItems2 = cart.CartItems.GetValueOrDefault(_SKUId2);
+                    return Math.Min(noOfItems, noOFItems2) * discountPerCombination;
+                }
             }
 
             return 0.00d;
