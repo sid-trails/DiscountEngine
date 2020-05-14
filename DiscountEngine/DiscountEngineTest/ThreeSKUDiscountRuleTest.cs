@@ -5,7 +5,7 @@ using Moq;
 namespace DiscountEngineTest
 {
     [TestClass]
-    public class ThreeSKUDiscountRule
+    public class ThreeSKUDiscountRuleTest
     {
         private Inventory GetTestInventory()
         {
@@ -36,5 +36,23 @@ namespace DiscountEngineTest
             Assert.IsFalse(testObj.isApplicableOnCart(cart));
         }
         
+        
+        [TestMethod]
+        public void ShouldReturnDiscountAmountBasedOnItemsAdded()
+        {
+            Cart cart = new Cart(GetTestInventory());
+            cart.AddItem('A',5);
+            ThreeSkuDiscountRule testObj = new ThreeSkuDiscountRule('A');
+            Assert.AreEqual(20.00d,testObj.CalculateDiscountAmount(cart));
+        }
+        
+        [TestMethod]
+        public void ShouldReturnDiscountAmountBasedOnIfMultipleSetsAdded()
+        {
+            Cart cart = new Cart(GetTestInventory());
+            cart.AddItem('A',10);
+            ThreeSkuDiscountRule testObj = new ThreeSkuDiscountRule('A');
+            Assert.AreEqual(60.00d,testObj.CalculateDiscountAmount(cart));
+        }
     }
 }

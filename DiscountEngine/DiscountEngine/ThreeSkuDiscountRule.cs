@@ -21,7 +21,14 @@ namespace DiscountEngine
 
         public double CalculateDiscountAmount(Cart cart)
         {
-            throw new NotImplementedException();
+            int noOfItems = cart.CartItems.GetValueOrDefault('A');
+            if (isApplicableOnCart(cart))
+            {
+                return (noOfItems / 3) * 20;
+                
+            }
+
+            return 0.00;
         }
     }
 }
