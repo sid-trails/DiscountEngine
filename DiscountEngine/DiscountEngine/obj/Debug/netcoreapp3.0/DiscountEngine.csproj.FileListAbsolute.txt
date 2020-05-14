@@ -1,0 +1,11 @@
+/Users/thw6818/dotnet-space/DiscountEngine/DiscountEngine/DiscountEngine/obj/Debug/netcoreapp3.0/DiscountEngine.csprojAssemblyReference.cache
+/Users/thw6818/dotnet-space/DiscountEngine/DiscountEngine/DiscountEngine/obj/Debug/netcoreapp3.0/DiscountEngine.AssemblyInfoInputs.cache
+/Users/thw6818/dotnet-space/DiscountEngine/DiscountEngine/DiscountEngine/obj/Debug/netcoreapp3.0/DiscountEngine.AssemblyInfo.cs
+/Users/thw6818/dotnet-space/DiscountEngine/DiscountEngine/DiscountEngine/bin/Debug/netcoreapp3.0/DiscountEngine
+/Users/thw6818/dotnet-space/DiscountEngine/DiscountEngine/DiscountEngine/bin/Debug/netcoreapp3.0/DiscountEngine.deps.json
+/Users/thw6818/dotnet-space/DiscountEngine/DiscountEngine/DiscountEngine/bin/Debug/netcoreapp3.0/DiscountEngine.runtimeconfig.json
+/Users/thw6818/dotnet-space/DiscountEngine/DiscountEngine/DiscountEngine/bin/Debug/netcoreapp3.0/DiscountEngine.runtimeconfig.dev.json
+/Users/thw6818/dotnet-space/DiscountEngine/DiscountEngine/DiscountEngine/bin/Debug/netcoreapp3.0/DiscountEngine.dll
+/Users/thw6818/dotnet-space/DiscountEngine/DiscountEngine/DiscountEngine/bin/Debug/netcoreapp3.0/DiscountEngine.pdb
+/Users/thw6818/dotnet-space/DiscountEngine/DiscountEngine/DiscountEngine/obj/Debug/netcoreapp3.0/DiscountEngine.dll
+/Users/thw6818/dotnet-space/DiscountEngine/DiscountEngine/DiscountEngine/obj/Debug/netcoreapp3.0/DiscountEngine.pdb

@@ -34,5 +34,21 @@ namespace DiscountEngineTest
 
         }
 
+        [TestMethod]
+        public void ShouldReturnTrueIfInventoryHasKey()
+        {
+            Inventory inv = new Inventory();
+            inv.AddSKU('A',50.00d);
+            Assert.AreEqual(true ,inv.HasSKU('A'));
+        }
+
+        [TestMethod]
+        public void ShouldReturnFalseIfInventoryDoesntHaveKey()
+        {
+            Inventory inv = new Inventory();
+            inv.AddSKU('A',50.00d);
+            Assert.AreEqual(false ,inv.HasSKU('B'));
+        }
+
     }
 }

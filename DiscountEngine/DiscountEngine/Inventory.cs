@@ -1,10 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using DiscountEngine.InterFaces;
 
 namespace DiscountEngine
 {
-    public class Inventory
+    public class Inventory:IInventory
     {
         private  SortedDictionary<char, double> _inventory = new SortedDictionary<char, double>();
         
@@ -30,6 +31,15 @@ namespace DiscountEngine
             }
             return _inventory[SKUId];
         }
-        
+
+        public bool HasSKU(char SKUId)
+        {
+            if (_inventory.ContainsKey(SKUId))
+            {
+                return true;
+            }
+            return false;
+        }
+
     }
 }

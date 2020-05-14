@@ -9,7 +9,7 @@ namespace DiscountEngine
         
         public bool isApplicableOnCart(Cart cart)
         {
-            return cart.CartItems.GetValueOrDefault('A') == 3;
+            throw new NotImplementedException();
         }
 
         public double CalculateDiscountAmount(Cart cart)
