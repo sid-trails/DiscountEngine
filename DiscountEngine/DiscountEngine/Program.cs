@@ -31,7 +31,7 @@ namespace DiscountEngine
             cart.AddItem('B',1);
             cart.AddItem('C',1);
 
-            double discount = engine.ApplyBestDiscount(cart);
+            double discount = engine.ApplyAllDiscounts(cart);
             Console.WriteLine(String.Format("Cart Value {0} and Discount is {1} /n Amount Tobe Paid {2}", cart.CartValue , discount, 
                 cart.CartValue-discount));
             
@@ -42,7 +42,7 @@ namespace DiscountEngine
             cart.AddItem('B',5);
             cart.AddItem('C',1);
 
-             discount = engine.ApplyBestDiscount(cart);
+             discount = engine.ApplyAllDiscounts(cart);
             Console.WriteLine(String.Format("Cart Value {0} and Discount is {1} /n Amount Tobe Paid {2}", cart.CartValue , discount, 
                 cart.CartValue-discount));
 
@@ -54,7 +54,7 @@ namespace DiscountEngine
             cart.AddItem('C',1);
             cart.AddItem('D',1);
 
-            discount = engine.ApplyBestDiscount(cart);
+            discount = engine.ApplyAllDiscounts(cart);
             Console.WriteLine(String.Format("Cart Value {0} and Discount is {1} /n Amount Tobe Paid {2}", cart.CartValue , discount, 
                 cart.CartValue-discount));
             

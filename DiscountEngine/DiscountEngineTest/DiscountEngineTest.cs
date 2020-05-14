@@ -45,5 +45,20 @@ namespace DiscountEngineTest
             Assert.AreEqual(125.00d ,engine.ApplyBestDiscount(cart));
             
         }
+        
+        [TestMethod]
+        public void ShouldApplyDiscountForAllApplicableRules()
+        {
+            var Rule1 = new SameSKUFixedPriceRule('A', 3, 130, GetTestInventory());
+            var Rule2 = new CombinationDiscountRule('C', 'D', 40.00d, GetTestInventory());
+            var engine = new DiscountEngine.DiscountEngine(new List<IDiscountRule>() { Rule1, Rule2});
+            var cart = new Cart(GetTestInventory());
+            cart.AddItem('A',  5 );
+            cart.AddItem('C', 5);
+            cart.AddItem('D', 5);
+           
+            Assert.AreEqual(145.00d ,engine.ApplyAllDiscounts(cart));
+            
+        }
     }
 }
