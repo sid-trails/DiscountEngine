@@ -21,7 +21,7 @@ namespace DiscountEngine
                 
                     var discAmount = rule.CalculateDiscountAmount(cart);
                     if(discAmount !=0)
-                        dictionaryValues.Add(rule.GetType().Name,discAmount);
+                        dictionaryValues.Add(_rules.IndexOf(rule).ToString(),discAmount);
             });
             return dictionaryValues.FirstOrDefault(x => x.Value.Equals(dictionaryValues.Values.Max())).Value;
         }

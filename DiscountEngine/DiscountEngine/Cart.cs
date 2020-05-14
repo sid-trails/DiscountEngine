@@ -17,7 +17,6 @@ namespace DiscountEngine
 
         private IInventory _inventory;
         private IDiscountEngine _discountEngine;
-        private IList<IDiscountRule> _rules;
 
         public double CartValue
         {
