@@ -20,7 +20,7 @@ namespace DiscountEngineTest
         [TestMethod]
         public void ShouldApplyDiscountBasedOnWhichOffersBestValue()
         {
-            var Rule1 = new ThreeSkuDiscountRule('A');
+            var Rule1 = new SameSKUFixedPriceRule('A', 3, 130, GetTestInventory());
             var Rule2 = new CombinationDiscountRule('C', 'D', 40.00d, GetTestInventory());
             var engine = new DiscountEngine.DiscountEngine(new List<IDiscountRule>() { Rule1, Rule2});
             var cart = new Cart(GetTestInventory());
@@ -34,7 +34,7 @@ namespace DiscountEngineTest
         [TestMethod]
         public void ShouldApplyDiscountBasedOnWhichOffersBestValueWith2ApplicableRules()
         {
-            var Rule1 = new ThreeSkuDiscountRule('A');
+            var Rule1 = new SameSKUFixedPriceRule('A', 3, 130, GetTestInventory());
             var Rule2 = new CombinationDiscountRule('C', 'D', 40.00d, GetTestInventory());
             var engine = new DiscountEngine.DiscountEngine(new List<IDiscountRule>() { Rule1, Rule2});
             var cart = new Cart(GetTestInventory());

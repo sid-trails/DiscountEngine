@@ -5,7 +5,7 @@ using Moq;
 namespace DiscountEngineTest
 {
     [TestClass]
-    public class ThreeSKUDiscountRuleTest
+    public class SameSKUFixedPriceRuleTest
     {
         private Inventory GetTestInventory()
         {
@@ -22,7 +22,7 @@ namespace DiscountEngineTest
             
             Cart cart = new Cart(GetTestInventory());
             cart.AddItem('A','5');
-            ThreeSkuDiscountRule testObj = new ThreeSkuDiscountRule('A');
+            SameSKUFixedPriceRule testObj = new SameSKUFixedPriceRule('A',3,130,GetTestInventory());
             Assert.IsTrue(testObj.isApplicableOnCart(cart));
 
         }
@@ -32,7 +32,7 @@ namespace DiscountEngineTest
         {
             Cart cart = new Cart(GetTestInventory());
             cart.AddItem('B','5');
-            ThreeSkuDiscountRule testObj = new ThreeSkuDiscountRule('A');
+            SameSKUFixedPriceRule testObj = new SameSKUFixedPriceRule('A',3,130,GetTestInventory());
             Assert.IsFalse(testObj.isApplicableOnCart(cart));
         }
         
@@ -42,7 +42,7 @@ namespace DiscountEngineTest
         {
             Cart cart = new Cart(GetTestInventory());
             cart.AddItem('A',5);
-            ThreeSkuDiscountRule testObj = new ThreeSkuDiscountRule('A');
+            SameSKUFixedPriceRule testObj = new SameSKUFixedPriceRule('A',3,130,GetTestInventory());
             Assert.AreEqual(20.00d,testObj.CalculateDiscountAmount(cart));
         }
         
@@ -51,7 +51,7 @@ namespace DiscountEngineTest
         {
             Cart cart = new Cart(GetTestInventory());
             cart.AddItem('A',10);
-            ThreeSkuDiscountRule testObj = new ThreeSkuDiscountRule('A');
+            SameSKUFixedPriceRule testObj = new SameSKUFixedPriceRule('A',3,130,GetTestInventory());
             Assert.AreEqual(60.00d,testObj.CalculateDiscountAmount(cart));
         }
     }

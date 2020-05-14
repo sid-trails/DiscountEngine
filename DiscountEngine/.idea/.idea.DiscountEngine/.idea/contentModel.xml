@@ -28,7 +28,7 @@
           </e>
         </e>
         <e p="Program.cs" t="Include" />
-        <e p="ThreeSkuDiscountRule.cs" t="Include" />
+        <e p="SameSKUFixedPriceRule.cs" t="Include" />
       </e>
       <e p="DiscountEngine.sln" t="IncludeFlat" />
       <e p="DiscountEngineTest" t="IncludeRecursive">
@@ -45,7 +45,7 @@
             </e>
           </e>
         </e>
-        <e p="ThreeSKUDiscountRuleTest.cs" t="Include" />
+        <e p="SameSKUFixedPriceRuleTest.cs" t="Include" />
       </e>
       <e p="packages" t="ExcludeRecursive" />
     </e>
