@@ -4,6 +4,6 @@ namespace DiscountEngine.InterFaces
 {
     public interface IDiscountEngine
     {
-        void ApplyBestDiscount(IList<IDiscountRule> rules, Cart cart);
+        double ApplyBestDiscount(IList<IDiscountRule> Rules,Cart cart);
     }
 }

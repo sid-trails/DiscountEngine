@@ -93,3 +93,5 @@
 /Users/thw6818/dotnet-space/DiscountEngine/DiscountEngine/DiscountEngineTest/obj/Debug/netcoreapp3.0/DiscountEngineTest.csproj.CopyComplete
 /Users/thw6818/dotnet-space/DiscountEngine/DiscountEngine/DiscountEngineTest/obj/Debug/netcoreapp3.0/DiscountEngineTest.dll
 /Users/thw6818/dotnet-space/DiscountEngine/DiscountEngine/DiscountEngineTest/obj/Debug/netcoreapp3.0/DiscountEngineTest.pdb
+/Users/thw6818/dotnet-space/DiscountEngine/DiscountEngine/DiscountEngineTest/bin/Debug/netcoreapp3.0/Castle.Core.dll
+/Users/thw6818/dotnet-space/DiscountEngine/DiscountEngine/DiscountEngineTest/bin/Debug/netcoreapp3.0/Moq.dll
