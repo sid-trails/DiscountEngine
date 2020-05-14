@@ -34,17 +34,11 @@ namespace DiscountEngine
             }
         }
 
-        public double CostToConsumer {
-            get { return _discountEngine.ApplyBestDiscount(_rules,this); }
-        }
 
-        public  Cart(IInventory inventory, IDiscountEngine discountEngine, IList<IDiscountRule> rules)
+        public  Cart(IInventory inventory)
         {
             _inventory = inventory;
             _cartItems= new SortedDictionary<char, int>();
-            _discountEngine = discountEngine;
-            _rules = rules;
-            _rules = rules;
         }
 
 

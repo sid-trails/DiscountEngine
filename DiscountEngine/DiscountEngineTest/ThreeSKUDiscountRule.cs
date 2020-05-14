@@ -1,5 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using DiscountEngine;
+using Moq;
 
 namespace DiscountEngineTest
 {
@@ -17,9 +18,22 @@ namespace DiscountEngineTest
         
         [TestMethod]
         public void ShouldReturnTrueIfACartWithThreeSKUSOFTypePassedIsInCart()
-        {
-          // Cart cart = new Cart(GetTestInventory());
+        { 
+            
+            Cart cart = new Cart(GetTestInventory());
+            cart.AddItem('A','5');
+            ThreeSkuDiscountRule testObj = new ThreeSkuDiscountRule('A');
+            Assert.IsTrue(testObj.isApplicableOnCart(cart));
 
+        }
+        
+        [TestMethod]
+        public void ShouldReturnFalseIfACartWithThreeSKUSOFTypePassedIsInCart()
+        {
+            Cart cart = new Cart(GetTestInventory());
+            cart.AddItem('B','5');
+            ThreeSkuDiscountRule testObj = new ThreeSkuDiscountRule('A');
+            Assert.IsFalse(testObj.isApplicableOnCart(cart));
         }
         
     }

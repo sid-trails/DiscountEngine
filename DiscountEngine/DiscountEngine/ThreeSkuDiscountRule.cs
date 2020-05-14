@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using DiscountEngine.InterFaces;
 
 namespace DiscountEngine
@@ -15,7 +16,7 @@ namespace DiscountEngine
         }
         public bool isApplicableOnCart(Cart cart)
         {
-            throw new NotImplementedException();
+            return cart.CartItems.ContainsKey('A') && cart.CartItems.GetValueOrDefault('A') >= 3;
         }
 
         public double CalculateDiscountAmount(Cart cart)
