@@ -12,12 +12,12 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Cart.cs" t="Include" />
         <e p="CombinationDiscountRule.cs" t="Include" />
+        <e p="DiscountEngine.cs" t="Include" />
         <e p="DiscountEngine.csproj" t="IncludeRecursive" />
         <e p="InterFaces" t="Include">
           <e p="IDiscountEngine.cs" t="Include" />
           <e p="IDiscountRule.cs" t="Include" />
           <e p="IInventory.cs" t="Include" />
-          <e p="Invoice.cs" t="Include" />
         </e>
         <e p="Inventory.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
