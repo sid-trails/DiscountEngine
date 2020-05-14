@@ -11,6 +11,7 @@
       <e p="DiscountEngine" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="Cart.cs" t="Include" />
+        <e p="CombinationDiscountRule.cs" t="Include" />
         <e p="DiscountEngine.csproj" t="IncludeRecursive" />
         <e p="InterFaces" t="Include">
           <e p="IDiscountEngine.cs" t="Include" />
@@ -33,6 +34,7 @@
       <e p="DiscountEngineTest" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="CartTest.cs" t="Include" />
+        <e p="CombinationDiscountRuleTest.cs" t="Include" />
         <e p="DiscountEngineTest.cs" t="Include" />
         <e p="DiscountEngineTest.csproj" t="IncludeRecursive" />
         <e p="InventoryTest.cs" t="Include" />

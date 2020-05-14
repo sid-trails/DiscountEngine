@@ -16,12 +16,12 @@ namespace DiscountEngine
         }
         public bool isApplicableOnCart(Cart cart)
         {
-            return cart.CartItems.ContainsKey('A') && cart.CartItems.GetValueOrDefault('A') >= 3;
+            return cart.CartItems.ContainsKey(_skuId) && cart.CartItems.GetValueOrDefault(_skuId) >= 3;
         }
 
         public double CalculateDiscountAmount(Cart cart)
         {
-            int noOfItems = cart.CartItems.GetValueOrDefault('A');
+            int noOfItems = cart.CartItems.GetValueOrDefault(_skuId);
             if (isApplicableOnCart(cart))
             {
                 return (noOfItems / 3) * 20;
