@@ -14,7 +14,11 @@
     },
     "frameworks": {
       "netcoreapp3.0": {
-        "projectReferences": {}
+        "projectReferences": {
+          "/Users/thw6818/dotnet-space/DiscountEngine/DiscountEngine/DiscountEngine/DiscountEngine.csproj": {
+            "projectPath": "/Users/thw6818/dotnet-space/DiscountEngine/DiscountEngine/DiscountEngine/DiscountEngine.csproj"
+          }
+        }
       }
     },
     "warningProperties": {

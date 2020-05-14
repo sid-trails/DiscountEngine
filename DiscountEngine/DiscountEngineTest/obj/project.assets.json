@@ -2029,6 +2029,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
+      },
+      "DiscountEngine/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.0",
+        "compile": {
+          "bin/placeholder/DiscountEngine.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DiscountEngine.dll": {}
+        }
       }
     }
   },
@@ -6864,10 +6874,16 @@
         "system.xml.xpath.xmldocument.4.0.1.nupkg.sha512",
         "system.xml.xpath.xmldocument.nuspec"
       ]
+    },
+    "DiscountEngine/1.0.0": {
+      "type": "project",
+      "path": "../DiscountEngine/DiscountEngine.csproj",
+      "msbuildProject": "../DiscountEngine/DiscountEngine.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.0": [
+      "DiscountEngine >= 1.0.0",
       "MSTest.TestAdapter >= 2.0.0",
       "MSTest.TestFramework >= 2.0.0",
       "Microsoft.NET.Test.Sdk >= 16.2.0",
@@ -6897,7 +6913,11 @@
       },
       "frameworks": {
         "netcoreapp3.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/thw6818/dotnet-space/DiscountEngine/DiscountEngine/DiscountEngine/DiscountEngine.csproj": {
+              "projectPath": "/Users/thw6818/dotnet-space/DiscountEngine/DiscountEngine/DiscountEngine/DiscountEngine.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
